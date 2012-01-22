@@ -12,4 +12,11 @@ public class Alphabet {
 			chars[i] = alphabet.charAt(i);
 		}
 	}
+	
+	public boolean verifyInclusion(char x){
+		for (int i=0; i<lenght;i++){
+			if (chars[i]==x) return true;
+		}
+		return false;
+	}
 }
