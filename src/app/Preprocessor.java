@@ -1,3 +1,5 @@
+package app;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.BufferedWriter;
@@ -22,14 +24,14 @@ public class Preprocessor {
 						newLine.append(line.charAt(i));
 					}
 				}
+				line = newLine.toString();
+				bw.write(line);
+				bw.newLine();
+				
 				line = br.readLine();
 				newLine = new StringBuffer(line.length());
 			}
-			
-			
-			
 
-			
 			br.close();
 			bw.close();
 		} catch (IOException e) {
