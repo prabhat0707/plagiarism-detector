@@ -16,8 +16,8 @@ public class Preprocessor {
 		
 		try {
 			String line = br.readLine();
-			StringBuffer newLine = new StringBuffer(line.length());
-			while (line != ""){
+			while (line != "" && line!=null){
+				StringBuffer newLine = new StringBuffer(line.length());
 				line = line.toLowerCase();
 				for (int i=0; i<line.length();i++){
 					if (a.verifyInclusion(line.charAt(i))){
@@ -28,8 +28,7 @@ public class Preprocessor {
 				bw.write(line);
 				bw.newLine();
 				
-				line = br.readLine();
-				newLine = new StringBuffer(line.length());
+				line = br.readLine();					
 			}
 
 			br.close();
